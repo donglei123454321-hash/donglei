@@ -144,3 +144,74 @@ body {
     padding: 40px 0;
     font-size: 14px;
 }
+/* 留言区域整体背景 */
+.message-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+/* 表单容器 */
+.message-form {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    /* 增加柔和的阴影，使其更有立体感 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 输入框组合 */
+.message-form input, 
+.message-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: all 0.3s ease; /* 过渡动画 */
+    box-sizing: border-box; /* 防止宽度溢出 */
+}
+
+/* 输入框点击（聚焦）时的状态 */
+.message-form input:focus, 
+.message-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color); /* 变成你设置的稳重红 */
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(192, 57, 43, 0.2); /* 淡淡的红晕 */
+}
+
+/* 文本域高度 */
+.message-form textarea {
+    resize: vertical; /* 只允许上下拉伸，防止撑破布局 */
+    min-height: 120px;
+}
+
+/* 提交按钮 */
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px; /* 字间距加宽，更显大气 */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* 按钮悬停效果 */
+.submit-btn:hover {
+    background-color: #a02e22;
+    transform: translateY(-1px); /* 悬停微动 */
+}
+
+/* 按钮点击瞬间 */
+.submit-btn:active {
+    transform: translateY(1px);
+}
