@@ -1,48 +1,72 @@
-/* 基础样式重置 */
+/* 全局变量定义，方便一键换肤 */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007bff;
+    --nav-bg: #f8f9fa;
+}
+
+/* 深色模式变量 */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f4f4;
+    --primary-color: #3793ff;
+    --nav-bg: #2d2d2d;
+}
+
 body {
-    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
-    color: #333;
+    transition: all 0.3s ease; /* 让切换颜色时有平滑过渡效果 */
 }
 
-/* 导航栏样式 */
-header {
-    background: #2c3e50;
-    color: white;
-    padding: 1rem 0;
-}
-
-nav {
+.navbar {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--nav-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
+    margin: 0;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
+.nav-links li { margin-left: 20px; }
 
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/* 欢迎区域 */
-#hero {
-    background: #f4f4f4;
-    padding: 100px 20px;
+.hero {
     text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--primary-color), #6610f2);
+    color: white;
 }
 
-/* 关于区域 */
-#about {
+.content {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
+}
+
+.action-btn {
+    padding: 10px 25px;
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#theme-toggle {
+    padding: 5px 15px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 4px;
 }
