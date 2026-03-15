@@ -3,38 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人网站</title>
+    <title>恩施中波台 - 官方网站</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">我的主页</div>
-        <ul class="nav-links">
-            <li><a href="#">首页</a></li>
-            <li><button id="theme-toggle">切换模式</button></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <div class="container">
+            <div class="logo">&emsp;&emsp;恩施中波台</div>
+            <nav class="nav">
+                <ul>
+                     <li><a href="#">台站首页</a></li>
+                    <li><a href="about.html">台情简介</a></li>
+                    <li><a href="#">政务公开</a></li>
+                    <li><a href="#">技术维护</a></li>
+                    <li><a href="#contact-section">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <main>
-        <section class="hero">
-            <h1 id="greeting">正在加载欢迎语...</h1>
-            <p>这是我亲手搭建的第一个网页，已经成功部署在 GitHub 上。</p>
-            <button class="action-btn" id="click-me">点我试试</button>
-        </section>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('1.jpeg');">
+                <div class="slide-content">
+                    <h2>传递电波 温暖人心</h2>
+                    <p>恩施中波台致力于高质量广播信号覆盖</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80');">
+                <div class="slide-content">
+                    <h2>技术驱动 安全播音</h2>
+                    <p>全天候监控保障，确保播出万无一失</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
 
-        <section class="content">
-            <h2>关于本项目</h2>
-            <p>通过 HTML 构建骨架，CSS 进行美化，JavaScript 实现交互。</p>
-        </section>
-    </main>
+    <section class="services container">
 
-    <footer>
-        <p>&copy; 2026 个人网站 | 保持好奇，持续进步</p>
-    </footer>
-<a href="my_resume.pdf" download>点击下载我的简历</a>
+        <div class="service-grid">
+            <div class="service-item">
+                <div class="icon">📡</div>
+                <h3>发射参数</h3>
+                <p>实时查看调频与中波发射频率及功率状况。</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">📝</div>
+                <h3>值班安排</h3>
+                <p>快速查询技术室、机房日常值班表及联系方式。</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">📜</div>
+                <h3>政策法规</h3>
+                <p>了解国家关于广播电视播出的最新规章制度。</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">🛠️</div>
+                <h3>技术报修</h3>
+                <p>台站内部设备维护申请与故障报修入口。</p>
+            </div>
+        </div>
+    </section>
 
-<a href="my_resume.pdf" download class="download-btn">下载文件 (PDF)</a>
+<footer class="footer" id="contact-section">
+    <p>&copy; 2026 恩施中波台 版权所有</p>
+    <p>地址：湖北省恩施土家族苗族自治州 | 电话：0718-8312070</p>
+</footer>
+
 
     <script src="script.js"></script>
 </body>

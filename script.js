@@ -1,31 +1,31 @@
-// 1. 实现根据时间自动显示欢迎语
-const greetingElement = document.getElementById('greeting');
-const hour = new Date().getHours();
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
 
-if (hour < 12) {
-    greetingElement.innerText = "早上好！";
-} else if (hour < 18) {
-    greetingElement.innerText = "下午好！";
-} else {
-    greetingElement.innerText = "晚上好！";
+function showSlide(index) {
+    // 隐藏所有图片
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // 处理循环显示
+    if (index >= slides.length) currentSlide = 0;
+    else if (index < 0) currentSlide = slides.length - 1;
+    else currentSlide = index;
+
+    // 显示当前图片
+    slides[currentSlide].classList.add('active');
 }
 
-// 2. 实现按钮点击弹窗
-const clickBtn = document.getElementById('click-me');
-clickBtn.addEventListener('click', () => {
-    alert('🎉 恭喜！你成功触发了 JavaScript 动作脚本！');
-});
+// 按钮控制
+function moveSlide(step) {
+    showSlide(currentSlide + step);
+}
 
-// 3. 实现深色模式切换
-const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
-    // 切换 body 的 dark-mode 类名
-    document.body.classList.toggle('dark-mode');
-    
-    // 更改按钮文字提示
-    if (document.body.classList.contains('dark-mode')) {
-        themeToggle.innerText = "浅色模式";
-    } else {
-        themeToggle.innerText = "深色模式";
-    }
-});
+// 自动轮播（每 5 秒切换一次）
+setInterval(() => {
+    moveSlide(1);
+}, 5000);
+
+// 初始化
+showSlide(currentSlide);
+
+
+
