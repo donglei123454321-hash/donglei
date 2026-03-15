@@ -69,37 +69,37 @@
     </section>
 
 
-<section class="message-section" id="contact">
-    <div class="container">
-        <div class="section-title">
-            <h2>在线留言</h2>
-            <div class="underline"></div>
-            <p>您的意见对我们非常重要，请填写下方表单与我们联系。</p>
-        </div>
-
-        <form action="https://forminit.com/f/5zwajxtjhyg" method="POST" id="guestbook-form" class="message-form">
+<section class="message-section" style="padding: 60px 20px; background: #f9f9f9;">
+    <div class="container" style="max-width: 600px; margin: 0 auto;">
+        
+        <form action="https://forminit.com/f/5zwajxtjhyg" method="POST" class="message-form" style="background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             
-            <div class="form-group">
-                <label for="user_name">您的姓名</label>
-                <input type="text" id="user_name" name="name" placeholder="请输入姓名" required>
+            <h2 style="text-align: center; color: #333; margin-bottom: 30px;">在线留言</h2>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">您的姓名</label>
+                <input type="text" name="name" required placeholder="请输入您的真实姓名" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
             
-            <div class="form-group">
-                <label for="user_email">电子邮箱</label>
-                <input type="email" id="user_email" name="email" placeholder="example@mail.com" required>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">联系邮箱</label>
+                <input type="email" name="email" required placeholder="example@mail.com" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
             </div>
 
-            <div class="form-group">
-                <label for="user_message">留言内容</label>
-                <textarea id="user_message" name="message" rows="5" placeholder="请详细描述您的问题或建议..." required></textarea>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold;">留言内容</label>
+                <textarea name="message" required placeholder="请详细填写您的意见或建议..." rows="5" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
             </div>
 
-            <input type="hidden" name="_next" value="https://eszbt.github.io/">
+            <input type="hidden" name="_charset_" value="utf-8">
 
-            <button type="submit" id="submit-btn" class="submit-btn">立即提交留言</button>
+            <button type="submit" class="submit-btn" style="width: 100%; padding: 15px; background-color: #c0392b; color: white; border: none; border-radius: 4px; font-size: 18px; font-weight: bold; cursor: pointer;">
+                提交留言
+            </button>
         </form>
     </div>
 </section>
+
 
 
 
