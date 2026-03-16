@@ -57,7 +57,15 @@ body {
     margin-left: 30px;
 }
 
-/* Logo 容器：改为左右水平排列 */
+.nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active { color: var(--primary-color); }/* Logo 容器：改为左右水平排列 */
+
 .logo {
     flex: 0 0 auto; /* 保持 Logo 原始大小 */
     display: flex;
@@ -68,7 +76,7 @@ body {
 
 .logo img {
     height: 60px; /* 根据实际视觉效果调整高度 */
-    margin-right:60px; /* 图片与文字之间的间距 */
+    margin-right:30px; /* 图片与文字之间的间距 */
     margin-bottom: 0; /* 清除之前上下布局时的底边距 */
 }
 
@@ -94,14 +102,7 @@ body {
 }
 
 
-.nav a {
-    text-decoration: none;
-    color: var(--dark-color);
-    font-weight: 500;
-    transition: 0.3s;
-}
 
-.nav a:hover, .nav a.active { color: var(--primary-color); }
 
 /* 轮播图 */
 .slider {
