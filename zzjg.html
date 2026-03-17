@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恩施中波转播台组织架构</title>
+    <style>
+        :root {
+            --gov-red: #d32f2f;
+            --bg-light: #f9f9f9;
+            --card-border: #e0e0e0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border: 2px solid var(--gov-red);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* 公用标题样式 */
+        .section-header {
+            background-color: var(--gov-red);
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            margin-bottom: 20px;
+        }
+
+        /* ---------------- 党支部架构 ---------------- */
+        .party-section {
+            flex: 1;
+            min-width: 300px;
+            border: 1px solid var(--card-border);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .org-tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tree-line {
+            width: 2px;
+            height: 30px;
+            background: var(--gov-red);
+        }
+
+        .tree-branch {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            border-top: 2px solid var(--gov-red);
+            padding-top: 20px;
+            margin-top: -2px;
+        }
+
+        /* ---------------- 职工风采 ---------------- */
+        .staff-section {
+            flex: 2;
+            min-width: 600px;
+            border: 1px solid var(--card-border);
+            padding: 20px;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        /* 人员卡片样式 */
+        .person-card {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .photo-box {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background-color: #eee;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name-tag {
+            background-color: var(--gov-red);
+            color: white;
+            padding: 5px 2px;
+            font-size: 0.9em;
+            line-height: 1.2;
+        }
+
+        .name-tag .job {
+            font-size: 0.8em;
+            display: block;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            margin-top: 2px;
+            padding-top: 2px;
+        }
+
+        .slogan {
+            margin-top: 40px;
+            font-size: 1.8em;
+            color: var(--gov-red);
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+        @media (max-width: 800px) {
+            .staff-grid { grid-template-columns: repeat(3, 1fr); }
+            .main-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    
+    <div class="party-section">
+        <div class="section-header">党支部架构</div>
+        <div class="org-tree">
+            <div class="person-card" style="width: 100px;">
+                <div class="photo-box">
+                    <img src="photo/p1.jpg" alt="杨明祥">
+                </div>
+                <div class="name-tag">杨明祥<span class="job">(支部书记)</span></div>
+            </div>
+            
+            <div class="tree-line"></div>
+            
+            <div class="tree-branch">
+                <div class="person-card" style="width: 100px;">
+                    <div class="photo-box">
+                        <img src="photo/p4.jpg" alt="赵鑫">
+                    </div>
+                    <div class="name-tag">赵鑫<span class="job">(纪检委员)</span></div>
+                </div>
+                <div class="person-card" style="width: 100px;">
+                    <div class="photo-box">
+                        <img src="photo/p2.jpg" alt="刘艺元">
+                    </div>
+                    <div class="name-tag">刘艺元<span class="job">(组织、宣传委员)</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="slogan">立党为公 执政为民</div>
+    </div>
+
+    <div class="staff-section">
+        <div class="section-header"> &emsp;&emsp;★★★ 湖北省广播电视局恩施中波转播台职工风采 ★★★</div>
+        <div class="staff-grid">
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p1.jpg" alt=""></div>
+                <div class="name-tag">杨明祥<span class="job">(台长)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p2.jpg" alt=""></div>
+                <div class="name-tag">刘艺元<span class="job">(副台长)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p3.jpg" alt=""></div>
+                <div class="name-tag">董磊<span class="job">(副台长)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p4.jpg" alt=""></div>
+                <div class="name-tag">赵鑫<span class="job">(办公室主任)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p5.jpg" alt=""></div>
+                <div class="name-tag">向伟<span class="job">(机房主任)</span></div>
+            </div>
+
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p6.jpg" alt=""></div>
+                <div class="name-tag">饶磊<span class="job">(机房副主任)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p7.jpg" alt=""></div>
+                <div class="name-tag">李向前<span class="job">(办公室副主任)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p8.jpg" alt=""></div>
+                <div class="name-tag">谭羽<span class="job">(财务)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p9.jpg" alt=""></div>
+                <div class="name-tag">王毅坤<span class="job">(助理工程师)</span></div>
+            </div>
+            <div class="person-card">
+                <div class="photo-box"><img src="photo/p10.jpg" alt=""></div>
+                <div class="name-tag">刘晓欢<span class="job">(助理工程师)</span></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -27,6 +27,32 @@ setInterval(() => {
 // 初始化
 showSlide(currentSlide);
 
+function updateLiveTime() {
+    const now = new Date();
+    
+    // 获取年月日
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    
+    // 获取时分秒
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    
+    // 写入 HTML
+    document.getElementById('date-part').textContent =   `${year}年${month}月${day}日`;
+    //document.getElementById('time-part').textContent = `      ${hours}:${minutes}:${seconds}`;
+// &nbsp; 代表一个不换行空格
+document.getElementById('time-part').innerHTML = `&nbsp;&nbsp;${hours}:${minutes}:${seconds}`;
+
+}
+
+// 每秒更新一次
+setInterval(updateLiveTime, 1000);
+
+// 页面加载完成后立即执行一次，防止白屏等待一秒
+window.onload = updateLiveTime;
 
 
 

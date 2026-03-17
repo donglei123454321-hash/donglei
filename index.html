@@ -9,50 +9,77 @@
 <body>
 
 <header class="header">
+
+
     <div class="container header-content">
+<div class="header-left">
+    <div id="live-time" class="time-display">
+        <div id="date-part"></div>
+        <div id="time-part"></div>
+    </div>
+</div>
         <div class="header-left"></div>
 
         <div class="logo">
             <img src="logo.png" alt="Logo">
-            <span>&emsp;&emsp;&emsp;湖北省广播电视局恩施中波转播台&emsp;</span>
+            <span>湖北省广播电视局恩施中波转播台</span>
         </div>
 
         <nav class="nav">
             <ul>
                 <li><a href="#">台站首页</a></li>
-                <li><a href="about.html">台情简介</a></li>
-                <li><a href="#">政务公开</a></li>
+                <li><a href="zttq.html" target="_blank">台情简介</a></li>
+                <li><a href="zzjg.html" target="_blank">组织机构</a></li>
+		 <li><a href="zcfg.html" target="_blank">政策法规</a></li>
                 <li><a href="#contact-section">联系我们</a></li>
             </ul>
         </nav>
     </div>
 </header>
-
-
-
-
-
         </div>
     </header>
 
-    <div class="slider">
-        <div class="slides">
-            <div class="slide active" style="background-image: url('1.jpeg');">
-                <div class="slide-content">
-                    <h2>传递电波 温暖人心</h2>
-                    <p>恩施中波台致力于高质量广播信号覆盖</p>
-                </div>
-            </div>
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1200&q=80');">
-                <div class="slide-content">
-                    <h2>技术驱动 安全播音</h2>
-                    <p>全天候监控保障，确保播出万无一失</p>
-                </div>
-            </div>
+<div class="main-layout">
+    <div class="side-column">
+        <div class="column-header">
+            <span>最新公告</span>
+            <a href="#" class="more-link">更多+</a>
         </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <ul class="news-list">
+            <li><a href="#">关于2026年技术维护的通知</a></li>
+            <li><a href="#">中波发射机房安全巡检报告</a></li>
+            <li><a href="#">春季优质播音竞赛结果公示</a></li>
+            <li><a href="#">新增应急广播覆盖范围说明</a></li>
+            <li><a href="#">设备采购招标代理机构入围名单</a></li>
+        </ul>
     </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active" style="background-image: url('photo/1.jpg');"></div>
+                <div class="slide" style="background-image: url('photo/2.jpeg');"></div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="side-column">
+        <div class="column-header">
+            <span>行业动态</span>
+            <a href="#" class="more-link">更多+</a>
+        </div>
+        <ul class="news-list">
+            <li><a href="#">全国广播电视技术年会要点</a></li>
+            <li><a href="#">5G高新视频应用技术研究</a></li>
+            <li><a href="#">智慧广电建设指导意见解读</a></li>
+            <li><a href="#">数字化音频处理技术新进展</a></li>
+            <li><a href="#">中波广播系统抗干扰技术探讨</a></li>
+        </ul>
+    </div>
+</div>
+
 
     <section class="services container">
 
@@ -60,22 +87,22 @@
 
             <div class="service-item">
                 <div class="icon">👥</div>
-                <h3>组织机构</h3>
+                <h3>一</h3>
                 <p></p>
             </div>
             <div class="service-item">
                 <div class="icon">📜</div>
-                <h3>政策法规</h3>
+                <h3>二</h3>
                 <p></p>
             </div>
             <div class="service-item">
                 <div class="icon">📡</div>
-                <h3>发射参数</h3>
+                <h3>三</h3>
                 <p></p>
             </div>
             <div class="service-item">
                 <div class="icon">🛠️</div>
-                <h3>技术维护</h3>
+                <h3>四</h3>
                 <p></p>
             </div>
         </div>
@@ -87,9 +114,12 @@
 
 <div class="contact-box" style="text-align: center; padding: 50px;">
     <h3>&emsp;在线留言反馈</h3>
-    <p>为了确保您的留言能准确送达，请点击下方按钮进入官方反馈通道：</p>
     <a href="https://wj.qq.com/s2/25991487/ba52/" target="_blank" class="submit-btn" style="text-decoration: none; display: inline-block;">
         进入留言系统
+    </a>
+    <h3>&emsp;在线上传文件</h3>
+    <a href="https://w8bmevyi.jsjform.com/f/yo1qTg" target="_blank" class="submit-btn" style="text-decoration: none; display: inline-block;">
+        进入上传系统
     </a>
 </div>
 

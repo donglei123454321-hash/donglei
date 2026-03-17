@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恩施中波转播台简介</title>
+    <style>
+        :root {
+            --primary-color: #004a99;
+            --secondary-color: #f4f7f9;
+            --accent-color: #e63946;
+            --text-color: #333;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f0f2f5;
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.3em;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        p {
+            text-indent: 2em;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            background: var(--secondary-color);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .stats-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-style: normal;
+            color: #ff0000;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>恩施中波转播台简介</h1>
+    </header>
+
+    <div class="section">
+        <div class="section-title">历史沿革与概况</div>
+        <p>
+            恩施中波转播台成立于<span class="highlight">1970年</span>，于2005年上划至湖北省广播电视局。为支持宜万铁路建设，本台于2010年5月整体搬迁至209国道旁龙凤镇潘家店处。
+            目前台址占地面积<span class="highlight">62.83亩</span>，建筑面积2116.4平方米。院内环境优美，景色宜人，实现了发射场地的封闭式规范管理。
+        </p>
+    </div>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>核心任务</h3>
+            转播中央和省台广播节目，承担相关电台SY工作。
+            <ul style="padding-left: 20px; margin-top: 10px;">
+                <li><strong>中国之声：</strong>1035KHZ (10KW)  1557KHZ (3KW)</li>
+                <li><strong>湖北之声：</strong> 774   KHZ (10KW)  1098KHZ (3KW)</li>
+            </ul>
+            覆盖半径约<span class="highlight">70公里</span>，覆盖人口近<span class="highlight">200万</span>。
+        </div>
+
+        <div class="info-card">
+            <h3>人员结构</h3>
+            核定编制14人。现有在职人员10人，退休11人。
+            <table class="stats-table">
+                <tr><td>本科/专科</td><td>9人 / 1人</td></tr>
+                <tr><td>工程师</td><td>4人</td></tr>
+                <tr><td>党员人数</td><td>15人 (在职6/退休9)</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 30px;">
+        <div class="section-title">技术装备与安全保障</div>
+        <p>
+            台内拥有<span class="highlight">96米和76米</span>两座自立式发射铁塔，配备10KW DAM中波发射机4部（2主2备）和3KW PDM中波发射机2部（2主）。为确保电力供应，安装有100KVA柴油发电机及自动倒换配电柜，实现了主备电源自动倒换。
+            同时，台内配备了自主研发的自动播控、运行维护管理及视频监控系统，全面保障安全播出。作为应急广播系统的重要组成部分，时刻准备发挥“急时应急”的关键作用。
+        </p>
+    </div>
+
+    <div class="footer">
+        在省广电局党组和无线台管理中心党委的领导下，向全省一流中波台目标迈进。
+    </div>
+</div>
+
+</body>
+</html>

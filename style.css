@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -313,3 +313,155 @@ body {
 .submit-btn:active {
     transform: translateY(1px);
 }
+/* 确保左侧容器垂直居中 */
+.header-left {
+    flex: 1;
+    display: flex;
+    align-items: center; /* 核心：确保整个时间块上下居中 */
+    justify-content: flex-start;
+}
+
+/* 时间显示容器 */
+.time-display {
+    color: #ff0000;
+    font-family: "Consolas", "Monaco", monospace;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0; /* 彻底贴左 */
+    line-height: 1.1; /* 紧凑的行高，让两行靠得更近，视觉更居中 */
+}
+
+#date-part {
+    font-size: 25px; /* 年月日稍微小一点，显出层次 */
+    margin-bottom: 10px; /* 与下方时间的微小间距 */
+    white-space: nowrap;
+}
+
+#time-part {
+    font-size: 25px; /* 时分秒大一些，方便阅读 */
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+
+
+
+/* 核心布局控制 */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* 强制左右栏与中间高度一致 */
+    gap: 15px;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* 左右侧边栏样式 */
+.sidebar {
+    flex: 1; /* 占据 1 份空间 */
+    min-width: 320px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 三栏布局容器 */
+.main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* 确保左右栏与中间高度对齐 */
+    gap: 15px;
+    max-width: 1350px;
+    margin: 20px auto;
+    height: 400px; /* 统一设置高度，图片将撑满此高度 */
+}
+
+/* 左右栏通用样式 */
+.side-column {
+    flex: 1; 
+    background: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 标题栏 */
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f8f8f8;
+    border-bottom: 2px solid #c00; /* 红色装饰线 */
+    font-weight: bold;
+}
+
+.more-link {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* 链接列表 */
+.news-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.news-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 文字过长显示省略号 */
+}
+
+/* 中间轮播图核心：全尺寸的关键 */
+.slider-container {
+    flex: 2; /* 轮播图占据更宽的空间 */
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides, .slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none; /* 默认隐藏 */
+    background-size: cover;    /* 核心：全尺寸覆盖，自动裁剪多余部分 */
+    background-position: center; /* 核心：图片居中对齐 */
+    background-repeat: no-repeat;
+}
+
+.slide.active {
+    display: block; /* 激活时显示 */
+}
+
+/* 左右按钮微调 */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.next { right: 0; }
+
+
+
+
